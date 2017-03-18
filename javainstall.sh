@@ -7,9 +7,9 @@
 echo -e "this script has been testing for Debian based distros only please stop if your system is 32 bit or not Debian or Ubuntu"
 #J_INSTALL_DIR=/usr/lib/jvm/java-8-oracle
 sudo mkdir -v /usr/local/java
-#URL=$(curl -s http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html | \
-#    awk "/downloads\['/ && ! /demos/ && /\['files'\]/ && /linux-x64/ && /\.tar\.gz/" | \
-#    grep -o 'http.*\.tar\.gz' 
+URL=$(curl -s http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html | \
+    awk "/downloads\['/ && ! /demos/ && /\['files'\]/ && /linux-x64/ && /\.tar\.gz/" | \
+    grep -o 'http.*\.tar\.gz' 
 
 #AVAILABLE=$(echo $URL | grep -o -P 'jdk-8u.{0,2}' | cut -d "u" -f 2)
 #CURRENT=$("$J_INSTALL_DIR"/bin/java -version 2>&1 | awk '/version/ {print $3}' | cut -d_ -f 2 | tr -d '"')
